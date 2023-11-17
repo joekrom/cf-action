@@ -21,4 +21,6 @@ RUN echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/a
 RUN apt install cf8-cli
 
 COPY entrypoint.sh /entrypoint.sh
+# change permission to execute the script and
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
