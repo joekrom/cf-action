@@ -1,11 +1,6 @@
 #!/bin/bash
-# Access input variables as environment variables
-CF_API=$1
-CF_USERNAME=$2
-CF_PASSWORD=$3
-CF_ORG=$4
-CF_SPACE=$5
 
 # Set up Cloud Foundry API, organization, and space
-cf -a $CF_API -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORG -s $CF_SPACE
+cf -a "$INPUT_CF_API" -u "$INPUT_CF_USERNAME"-p "$INPUT_CF_PASSWORD" -o "$INPUT_CF_ORG" -s "$INPUT_CF_SPACE"
+# run cf command
 bash -c "cf $*"
