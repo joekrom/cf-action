@@ -16,13 +16,13 @@ inputs:
   cf_space:
     description: 'cloud foundry space'
     required: true
+  command:
+    description: "Command to run using CF CLI eg: cf push"
+    required: true
+  
     
 runs:
   using: 'docker'
   image: 'DockerFile'
-    env:
-      CF_API: ${{ inputs.cf_api }}
-      CF_USERNAME: ${{ inputs.cf_username }}
-      CF_PASSWORD: ${{ inputs.cf_password }}
-      CF_ORG: ${{ inputs.cf_org }}
-      CF_SPACE: ${{ inputs.cf_space }}
+   args:
+    - ${{ inputs.command }}
