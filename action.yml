@@ -1,5 +1,8 @@
 name: 'px cloud foundry action'
 description: 'docker action for handling cloud foundry cmd'
+branding:
+  icon: "share"
+  color: "purple"
 inputs: 
   cf_api:
     description: 'cloud foundry api'
