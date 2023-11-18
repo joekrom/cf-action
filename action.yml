@@ -15,7 +15,7 @@ inputs:
     required: true
   cf_org:
     description: 'cloud foundry organisation'
-     required: true
+    required: true
   cf_space:
     description: 'cloud foundry space'
     required: true
