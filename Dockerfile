@@ -9,10 +9,10 @@ LABEL description="This is a custom Docker Image for cloud foundry github action
 # Disable Prompt During Packages Installation
 ARG DEBIAN_FRONTEND=noninteractive
 # Update Ubuntu Software repository
-RUN apt update
-RUN apt upgrade -y
+RUN sudo apt update
+RUN sudo apt upgrade -y
 # Install wget and gnupg
-RUN apt-get update && apt-get install -y wget gnupg
+RUN sudo apt-get update && apt-get install -y wget gnupg
 #Add the Cloud Foundry Foundation public key and package repository to your system by
 wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
 # Add Cloud Foundry CLI repository
