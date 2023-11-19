@@ -1,3 +1,4 @@
+#!/bin/bash
 # Set up Cloud Foundry API, organization, and space
 if cf login -a "$INPUT_CF_API" -u "$INPUT_CF_USERNAME" -p "$INPUT_CF_PASSWORD"; then
     # If login is successful, set the target organization and space
