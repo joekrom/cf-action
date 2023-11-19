@@ -14,7 +14,7 @@ RUN sudo apt upgrade -y
 # Install wget and gnupg
 RUN sudo apt-get update && apt-get install -y wget gnupg
 #Add the Cloud Foundry Foundation public key and package repository to your system by
-wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+RUN wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
 # Add Cloud Foundry CLI repository
 RUN echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
 # install client cloud foundry
