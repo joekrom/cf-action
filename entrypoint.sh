@@ -5,7 +5,7 @@ if cf login -a "$INPUT_CF_API" -u "$INPUT_CF_USERNAME" -p "$INPUT_CF_PASSWORD"; 
     cf target -o "$INPUT_CF_ORG" -s "$INPUT_CF_SPACE"
     # Run the provided cf command
     bash -c "cf $*"
-    if [ $? -eq 0]; then
+    if [ $? -eq 0 ]; then
        echo "status=complete" >> $GITHUB_OUTPUT
     else
       echo "status=error" >> $GITHUB_OUTPUT
