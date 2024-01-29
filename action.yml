@@ -19,6 +19,10 @@ inputs:
   cf_space:
     description: 'cloud foundry space'
     required: true
+    
+outputs:
+  status:
+    description: "provide the status of the cf command"
   command:
     description: "Command to run using CF CLI eg: cf push"
     required: true
