@@ -9,6 +9,7 @@ if cf login -a "$INPUT_CF_API" -u "$INPUT_CF_USERNAME" -p "$INPUT_CF_PASSWORD"; 
        echo "status=complete" >> $GITHUB_OUTPUT
     else
       echo "status=error" >> $GITHUB_OUTPUT
+      exit 1
     fi
 else
     # If login fails, print an error message
