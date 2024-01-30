@@ -21,4 +21,4 @@ jobs:
         cf_password: ${{ secrets.CF_PASSWORD }}
         cf_org: evo
         cf_space: common
-        command: push -f manifest.yml
+        command: cf push -f manifest.yml
